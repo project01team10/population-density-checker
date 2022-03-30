@@ -8,13 +8,13 @@
 
 ## Purpose:
 
-## USER STORY
+## USER STORY:
 As a user 
 I want to search for a specific location and see the population density in that area
 I want to be able to search for questions about the area
 
 
-## ACCEPTANCE TEST FOR USER STORY
+## ACCEPTANCE TEST FOR USER STORY:
 When I enter my city in the search bar 
 I see the map display that area
 I see the heat map of that area
