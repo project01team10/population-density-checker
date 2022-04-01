@@ -1,4 +1,6 @@
 
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.querySelector('#login');
     const createAccountForm = document.querySelector("#createAccount");
@@ -14,4 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
         loginForm.classList.remove("form--hidden");
         createAccountForm.classList.add("form--hidden");
     });
+
+    loginForm.addEventListener("submit", e => {
+        e.preventDefault();
+    })
+
 }); 
