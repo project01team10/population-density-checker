@@ -1,5 +1,8 @@
 :root {
   font-family:Arial, Helvetica, sans-serif;
+    --primary: #05117a;
+    --secondary: #ce1616;
+    --tertiary: #ffffff;
 }
 
 * {
@@ -13,9 +16,9 @@ body {
 header {
   padding: 20px;
   font-family: ‘Trebuchet MS’, ‘Lucida Sans Unicode’, ‘Lucida Grande’, ‘Lucida Sans’, Arial, sans-serif;
-  background-color: #2a607C;
-  color: #ffffff;
-  display:flex;
+  background-color: var(--primary);
+  color: var(--tertiary);
+  display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -24,7 +27,7 @@ header h1 {
   font-size: 48px;
 }
 header h1 .seo {
-  color: #d9dcd6;
+  color: var(--tertiary);
 }
 header div {
   padding-top: 15px;
@@ -42,8 +45,29 @@ header div ul {
 header div ul li {
   margin-left: 25px;
 }
+
+main h2 {
+  color: var(--secondary);
+  padding: 15px;
+}
+
+footer h2 {
+  color: var(--tertiary);
+}
+
+footer {
+  background-color: var(--primary);
+}
+
+footer h3 {
+  color: var(--tertiary);
+  font-size: 14px;
+  font-weight: normal;
+  padding-top: 10px;
+}
+
 a {
-  color: #FFFFFF;
+  color: var(--tertiary);
   text-decoration: none;
 }
 p {
