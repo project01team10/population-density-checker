@@ -12,3 +12,24 @@ map.addControl(
         mapboxgl: mapboxgl
     })
 );
+// this.mapInstance = new mapboxgl.Map({
+//     container: 'map',
+//     minZoom: 0,
+//     maxZoom: 18,
+//     center: this.getCenterOfMap(),
+//     zoom: this.getZoomValueOfMap(),
+//     style: this.style.streets
+// });
+
+// getCenterOfMap = function() {
+//   try {
+//     this.savedCenter = JSON.parse(localStorage.getItem('center'));
+//   } catch (exception) {
+//     console.log('Exception: ', exception);
+//   }
+//   if (this.savedCenter) {
+//     return this.savedCenter;
+//   } else {
+//     return this.defaultCenter;
+//   }
+// };
