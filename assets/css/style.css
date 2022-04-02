@@ -212,3 +212,8 @@ p {
   margin-bottom: 20px;
   font-size: 36px;
 }
+
+#map{
+  height: 800px;
+
+}
