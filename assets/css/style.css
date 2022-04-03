@@ -67,6 +67,18 @@ main h3 {
   font-size: 40px;
   text-align: center;
 }
+main h2 {
+  color: var(--primary);
+  padding: 15px;
+  font-size: 30px;
+  text-align: center;
+}
+p {
+  color: var(--primary);
+  padding: 15px;
+  font-size: 30px;
+  text-align: center;
+}
 
 footer {
   padding: 30px;
