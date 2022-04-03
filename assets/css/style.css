@@ -1,7 +1,7 @@
 :root {
   font-family:Arial, Helvetica, sans-serif;
     --primary: #05117a;
-    --secondary: #e61a1a;
+    --secondary: #e5e2e2;
     --tertiary: #ffffff;
 }
 
@@ -54,7 +54,7 @@ header img {
   display: inline-block;
 }
 
-main h2 {
+main h3 {
   color: var(--tertiary);
   padding: 15px;
   text-align: center;
@@ -211,4 +211,20 @@ p {
 .social-media-marketing h2 {
   margin-bottom: 20px;
   font-size: 36px;
+}
+
+#map{
+  height: 800px;
+
+}
+
+#map-des{
+  flex-direction: flex;
+  font-size: 40px;
+  text-align: center;
+  color: #05117a;
+  border-bottom: #ffffff 10px solid;
+  border-top: #ffffff 10px solid;
+
+
 }

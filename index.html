@@ -5,10 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Population Density Checker</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet' /> 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+  <!-- to Load the geocoder plugin -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
   <header>
     <a href="index.html">
       <img src="./assets/images/population-density-checker-logo-alt-white.svg" />
@@ -18,30 +23,34 @@
       <nav>
       <ul>
           <li>
-              <a class="hover:bg-violet-600" href="#About Us">About us</a>
+              <a class="hover:bg-orange-600" href="./about-our-team.html">Our Team</a>
           </li>
           <li>
-              <a class="hover:bg-green-600" href="#MAP">MAP</a>
-          </li>
-          <li>
-              <a class="hover:bg-orange-600" href="#Recommended">Recommended</a> 
-              <!-- added these from tailwind as an example  -->
-          </li>
-          <li>
-            <a class="hover:bg-orange-600" href="./login.html">login</a> 
+            <a class="hover:bg-orange-600" href="./services.html">Services offered</a> 
             <!-- added these from tailwind as an example  -->
         </li>
+        <li>
+          <a class="hover:bg-orange-600" href="./login.html">Login</a> 
+          <!-- added these from tailwind as an example  -->
+      </li>
+          <li>
+              <a class="hover:bg-green-600" href="./map.html">MAP</a>
+          </li>
+          <li>
+              <a class="hover:bg-orange-600" href="./recommended.html">Recommended</a> 
+              <!-- added these from tailwind as an example  -->
+          </li>
       </ul>
       </nav>
   </div>
   </header>
   <main>
-    <h2>Welcome to our website!</h2>
+    <h3>Welcome to our website!</h3>
+    <p> Feel free to navigate through our service and about me page to learn more about our company and services we have to offer </p>
+    <h3> How to use our service</h3>
+    <a class="" href=""></a>
+    
   </main>
-<!-- will use this later to add the api through js -->
-  <section> 
-
-  </section>
 
 
   <footer>
@@ -49,5 +58,6 @@
     <h3>Last updated March 2022.</h3>
   </footer>
   <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/mapbox.js"></script>
 </body>
 </html>
