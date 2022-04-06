@@ -38,21 +38,24 @@
       </nav>
   </div>
   </header>
-  <div class="search-container" id="searchContainer">
-    <h2 class="search-header">Search Toronto Neighbourhoods!</h2>
-    <input type="search" class=search-field id="search" />
-    <img class="search-icon" id="searchIcon" src="./assets/images/search-svgrepo-com.svg" />
-  </div>
   <main>
-    <head>
-      <h2>Recommended</h2>
+    <head class="search-container" id="searchContainer">
+      <h2 class="search-header">Search Toronto Neighbourhoods!</h2>
+      <input type="search" role="search" class=search-field id="search" />
+      <img class="search-icon" id="searchIcon" role="button" alt="search icon" src="./assets/images/search-svgrepo-com.svg" />
+      <div>
+        <h2>Recommended</h2>
+      </div>
+      <section>
+        <h3>Recently Searched Neighbourhoods</h3>
+        <div class="search-results-wrapper" id="searchResultsWrapper">
+          <h4>Search Result:</h4>
+        </div>
+      </section>
+      <section>
+        <h3>Favourites</h3>
+      </section>
     </head>
-    <section>
-      <h3>Recently Searched Neighbourhoods</h3>
-    </section>
-    <section>
-    <h3>Favourites</h3>
-    </section>
   </main>
 
   <footer>
