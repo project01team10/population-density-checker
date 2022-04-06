@@ -274,8 +274,8 @@ p {
 
 }
 .list-item{
-  display: flex;
   justify-content: center;
+  display: flex;
 }
 
 .resulthead {
