@@ -63,7 +63,7 @@ head h2 {
 main div h1 {
   color: var(--primary);
   background-color: var(--tertiary);
-  border-bottom: solid var(--secondary) 4px;
+  border-top: solid var(--secondary) 4px;
   padding: 15px;
   font-size: 30px;
   font-weight: normal;
@@ -72,8 +72,8 @@ main div h1 {
 
 main h2 {
   color: var(--primary);
-  padding: 5px;
-  margin: 5px;
+  padding: 10px 5px;
+  margin: none;
 }
 
 main h3 {
@@ -259,6 +259,7 @@ p {
 
 .search-container {
   background: var(--tertiary);
+  text-align: center;
 }
 
 .search-results-wrapper {
