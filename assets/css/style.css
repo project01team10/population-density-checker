@@ -303,4 +303,13 @@ p {
 
 
 }
+.list-item{
+  justify-content: center;
+  display: flex;
+}
 
+.resulthead {
+  font-size: 30px;
+  border-bottom: black 5px solid;
+  ;
+}
