@@ -122,34 +122,49 @@ map.on('load', () => {
 
 
 
+var listApi = document.querySelector("result-list");
+var searchApi = document.getElementById("search-api");
+// var enter = document.getElementById("#enter")
+function displayResults(data){
+    for (var i = 0; i < object.lenght; i++){
+        var title = document.createElement("li")
+        title.classList= "list-item";
+        title.setAttribute(data.name);
+    }
+}
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com',
+		'X-RapidAPI-Key': 'ad3818b50amsh3a5e40e5c143bcbp1954d3jsnbfbf8087ffee'
+	}
+};
 
+// fetch('https://wft-geo-db.p.rapidapi.com/v1/geo/cities/ +searchApi ', options)
+// 	.then(response => response.json())
+// 	.then(response => console.log(response))
+// 	.catch(err => console.error(err));
 
+document.querySelector("#enter").addEventListener("click", e => {
+    e.preventDefault();
+    var inputValue = searchApi.value; 
+    fetch('https://wft-geo-db.p.rapidapi.com/v1/geo/cities/' +inputValue, options)
+	.then(response => response.json())
+    .then(response =>  {
+        console.log(response);
+        return response;
+    })
+    .then((data) => {
+        const myData = data.data;
 
+        Object.entries(myData).forEach(([key, val]) => {
+          var title = document.createElement("li")
+          title.classList.add("list-item");
+          title.innerText = `${key}: ${val}`;
+          var list = document.getElementById("result-list");
+          list.appendChild(title);
+        })
+    })
+	.catch(err => console.error(err));
 
-// this.mapInstance = new mapboxgl.Map({
-//     container: 'map',
-//     minZoom: 0,
-//     maxZoom: 18,
-//     center: this.getCenterOfMap(),
-//     zoom: this.getZoomValueOfMap(),
-//     style: this.style.streets
-// });
-
-// getCenterOfMap = function() {
-//   try {
-//     this.savedCenter = JSON.parse(localStorage.getItem('center'));
-//   } catch (exception) {
-//     console.log('Exception: ', exception);
-//   }
-//   if (this.savedCenter) {
-//     return this.savedCenter;
-//   } else {
-//     return this.defaultCenter;
-//   }
-// };
-// $.getJSON("https://api.coindesk.com/v1/bpi/currentprice.json", function(currentPriceInfo){
-//   console.log(currentPriceInfo.bpi.USD.rate);
-//   coin.textContent = currentPriceInfo; 
-//   coin.addclass(".map-des");
-//   coin.appendChild("#invest")
-// });
+});

@@ -241,4 +241,13 @@ p {
 
 
 }
+.list-item{
+  display: flex;
+  justify-content: center;
+}
 
+.resulthead {
+  font-size: 30px;
+  border-bottom: black 5px solid;
+  ;
+}
