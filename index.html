@@ -4,39 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Population Density Checker - Home</title>
+    <title>Population Density Checker</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet' /> 
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+  <!-- to Load the geocoder plugin -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
   <header>
     <a href="index.html">
+      <img src="./assets/images/population-density-checker-logo-alt-white.svg" />
       <h1>Population Density Checker</h1>
     </a>
     <div>
       <nav>
       <ul>
           <li>
-              <a href="#about-us">About us</a>
+              <a class="hover:bg-orange-600" href="./about-our-team.html">Our Team</a>
           </li>
           <li>
-              <a href="#map">Map</a>
+            <a class="hover:bg-orange-600" href="./services.html">Services offered</a> 
+            <!-- added these from tailwind as an example  -->
+        </li>
+        <li>
+          <a class="hover:bg-orange-600" href="./login.html">Login</a> 
+          <!-- added these from tailwind as an example  -->
+      </li>
+          <li>
+              <a class="hover:bg-green-600" href="./map.html">MAP</a>
           </li>
           <li>
-              <a href="recommended.html">Recommended</a>
+              <a class="hover:bg-orange-600" href="./recommended.html">Recommended</a> 
+              <!-- added these from tailwind as an example  -->
           </li>
       </ul>
       </nav>
   </div>
   </header>
   <main>
-    <h2>Welcome to our website!</h2>
+    <h3>Welcome to our website!</h3>
+    <h2>About Our Comapny</h2>
+    <p>Welcome to PDC Inc.</p>
+    <p>At PDC Inc. we beleive in providing our users with services that make their life choices a bit more easier and efficient.Our comapny was founded in 2022 by four students at a coding bootcamp with a vison to create a service that would be useful for the enduser of any demographic. 
+    <p>Feel free to navigate through our service and about me page to learn more about our company and services we have to offer 
+  </p>
+    <h3> How to use our service</h3>
+    <a class="" href=""></a>
+    
   </main>
 
 
   <footer>
-    <script src="./assets/js/script.js"></script>
     <h2>Copyright &copy; 2022 PDC Inc. All Rights Reserved.</h2>
     <h3>Last updated March 2022.</h3>
   </footer>
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/mapbox.js"></script>
 </body>
 </html>

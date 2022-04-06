@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Population Density Checker - Recommended</title>
+    <title>Population Density Checker - MAP</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet' /> 
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+  <!-- to Load the geocoder plugin -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
   <header>
     <a href="index.html">
       <img src="./assets/images/population-density-checker-logo-alt-white.svg" />
@@ -26,7 +32,7 @@
         <li>
           <a class="hover:bg-orange-600" href="./login.html">Login</a> 
           <!-- added these from tailwind as an example  -->
-      </li>
+        </li>
           <li>
               <a class="hover:bg-green-600" href="./map.html">MAP</a>
           </li>
@@ -38,28 +44,36 @@
       </nav>
   </div>
   </header>
-  <div class="search-container" id="searchContainer">
-    <h2 class="search-header">Search Toronto Neighbourhoods!</h2>
-    <input type="search" class=search-field id="search" />
-    <img class="search-icon" id="searchIcon" src="./assets/images/search-svgrepo-com.svg" />
-  </div>
   <main>
-    <head>
-      <h2>Recommended</h2>
-    </head>
-    <section>
-      <h3>Recently Searched Neighbourhoods</h3>
-    </section>
-    <section>
-    <h3>Favourites</h3>
-    </section>
+    <h2 id="map-des" >Search Your Location here</h2>
+    <div id="invest"></div>
   </main>
+<!-- will use this later to add the api through js -->
+  <section> 
+    <div id='map' class="flex m-auto justify-center"></div>
+
+
+    
+    
+  </section>
+  <!-- <aside class="side">
+    <h3> Legend</h3>
+    <ul class="legend">
+      <li>black <span id="box1">box</span></li>
+      <li>White <span id="box2">box</span></li>
+      <li>Hispanic <span id="box3">box</span></li>
+      <li>Asian <span id="box4">box</span></li>
+    </ul>
+  </aside> -->
 
   <footer>
-    <script src="./assets/js/script.js"></script>
     <h2>Copyright &copy; 2022 PDC Inc. All Rights Reserved.</h2>
     <h3>Last updated March 2022.</h3>
   </footer>
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./assets/js/script.js"></script>
   <script src="./assets/js/mapbox.js"></script>
 </body>
 </html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Population Density Checker Login/sign-up</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="./assets/images/population-density-checker-logo-alt-white.svg" />
+        <h1>Population Density Checker</h1>
+        </a>
+        <div>
+            <nav>
+            <ul>
+                <li>
+                    <a class="hover:bg-orange-600" href="./about-our-team.html">Our Team</a>
+                </li>
+                <li>
+                  <a class="hover:bg-orange-600" href="./services.html">Services offered</a> 
+                  <!-- added these from tailwind as an example  -->
+              </li>
+              <li>
+                <a class="hover:bg-orange-600" href="./login.html">Login</a> 
+                <!-- added these from tailwind as an example  -->
+            </li>
+                <li>
+                    <a class="hover:bg-green-600" href="./map.html">MAP</a>
+                </li>
+                <li>
+                    <a class="hover:bg-orange-600" href="./recommended.html">Recommended</a> 
+                    <!-- added these from tailwind as an example  -->
+                </li>
+            </ul>
+            </nav>
+        </div>
+      </header>
+
+      <div class="contatiner h-screen m-auto flex justify-center">
+          <form id="login" class="form">
+              <h1 class="formtitle text-lg">Login</h1>
+              <div class="form_message ">Email or Username</div>
+              <div class="form__input-group">
+                  <input type="text" class="form__input px-6 py-3 rounded-xl ring-1" autofocus placeholder="Username or email">
+              </div>
+              <div class="form-input-group">
+                <div class="form_message ">Password</div>
+                 <input type="password" class="form__input px-6 py-3 rounded-xl ring-1" autofocus placeholder="Password">
+                </div>
+            <button class="form__button  text-sm tracking-wide py-3 px-6 bg-blue-50 rounded-xl transition hover:bg-blue-100 focus:bg-blue-100 active: bg-blue-200" type="submit">Continue</button>
+            <p class="form__text">
+                <a  class="form__link text-sm tracking-wide py-3 px-6 bg-blue-50 rounded-xl transition hover:bg-blue-100 focus:bg-blue-100 active: bg-blue-200" id="linkCreateAccount">Create account</a>
+            </p>
+          </form>
+          <form class="form form--hidden" id="createAccount">
+              <h1 class="formtitle text-lg">Create Account</h1>
+              <div class="form__message-error form__message"></div>
+              <div class="form__input-group">
+                 <div class="form__message form__message__error">Enter Username</div>
+                  <input type="text" class="form__input px-6 py-3 rounded-xl ring-1" id="signupUsername" autofocus placeholder="username">
+                  <div class="form__input-error-message"></div>
+              </div>
+              <div class="form-input-group">
+                 <div class="form_message ">Enter Email Address</div>
+                 <input type="text" class="form__input px-6 py-3 rounded-xl ring-1" autofocus placeholder="Email Address">
+                 <div class="form__input-error-message"></div>
+              </div>
+              <div class="form-input-group">
+                 <div class="form_message">Enter Password</div>
+                 <input type="password" class="form__input px-6 py-3 rounded-xl ring-1" autofocus placeholder="Password">
+              </div>
+              <div class="form__input-group">
+                 <div class="form__message form__message__error">Confirm Password</div>
+                 <input type="password" class="form__input px-6 py-3 rounded-xl ring-1" autofocus placeholder="Confirm Password">
+                 <!-- <div class="form__input-error-message"></div> -->
+                </div>
+             <button class="form__button  text-sm tracking-wide py-3 px-6 bg-blue-50 rounded-xl transition hover:bg-blue-100 focus:bg-blue-100 active: bg-blue-200" type="submit">Continue</button>
+             <p class="form__text">
+                 <a  class="form__link text-sm tracking-wide py-3 px-6 bg-blue-50 transition hover:bg-blue-100 focus:bg-blue-100 active: bg-blue-200" id="linkCreateAccount">Already have an account? Sign in</a>
+              </p>
+            
+          </form>
+      </div>
+    
+    <script src="./assets/js/login.js"></script>
+</body>
+</html>

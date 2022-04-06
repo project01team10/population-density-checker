@@ -28,8 +28,12 @@ The navigation tabs change with interaction
 
 ## Built With:
 * HTML
-* CSS
+* CSS- CSS framework used is Tailwind
 * JS
+
+## Server-side APIs used: 
+*
+*
 
 ## Screenshots: 
 
