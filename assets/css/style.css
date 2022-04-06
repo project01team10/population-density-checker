@@ -1,7 +1,7 @@
 :root {
   font-family:Arial, Helvetica, sans-serif;
     --primary: #05117a;
-    --secondary: #e5e2e2;
+    --secondary: #e61a1a;
     --tertiary: #ffffff;
 }
 
@@ -54,25 +54,27 @@ header img {
   display: inline-block;
 }
 
-main h3 {
-  color: var(--tertiary);
+head h2 {
+  background: var(--secondary);
+}
+
+main h2 {
+  color: var(--primary);
+  background-color: var(--tertiary);
   padding: 15px;
+  font-size: 30px;
+  font-weight: normal;
   text-align: center;
-  background-color: var(--secondary);
 }
 
 main h3 {
   color: var(--primary);
   padding: 15px;
-  font-size: 40px;
   text-align: center;
+  background-color: var(--tertiary);
+  font-size: 35px;
 }
-main h2 {
-  color: var(--primary);
-  padding: 15px;
-  font-size: 30px;
-  text-align: center;
-}
+
 p {
   color: var(--primary);
   padding: 15px;
@@ -203,6 +205,7 @@ p {
   background-color: #0072BB;
   color: #FFFFFF;
 }
+
 .search-engine-optimization img {
   max-height: 200px;
 }
@@ -220,6 +223,23 @@ p {
   margin-bottom: 20px;
   font-size: 36px;
 }
+
+.search-header {
+  color: var(--primary);
+  padding: 5px;
+}
+
+.search-field {
+  padding: 5px;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.search-icon {
+  width: 2%;
+  border-top: 5px;
+}
+
 .social-media-marketing h2 {
   margin-bottom: 20px;
   font-size: 36px;
