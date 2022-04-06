@@ -1,5 +1,7 @@
 var searchButtonEl = document.querySelector("#searchIcon");
 var userSearchInputEl = document.querySelector("#search");
+var searchResultsWrapperEl = document.querySelector("#searchResultsWrapper")
+var favouriteBtnEl = document.querySelector("#favouriteBtn");
 // var searchIdCounter = 0;
 var neighbourhoods = [
     "agincourt north", "agincourt south-malvern west", "alderwood", "annex", "banbury-don mills", "bathurst manor", "bay street corridor", "bayview village", "bayview woods-steeles", "bedford park-nortown", "beechborough-greenbrook", "bendale", "birchcliffe-Cliffside", "black creek", "blake-jones", "briar hill-belgravia", "bridle path-sunnybrook-york mills", "broadview north", "brookhaven-amesbury", "cabbagetown-south st. james town", "caledonia-fairbank", "casa loma", "centennial scarborough", "church-yonge corridor", "clairlea-birchmount", "clanton park", "cliffcrest", "corso italia-davenport", "crescent town", "danforth-east york", "danforth", "don valley village", "dorset park", "dovercourt-wallace emerson-junction", "downsview-roding-cfb", "dufferin grove", "east end-danforth", "edenbridge-humber valley", "eglinton east", "elms-old rexdale", "englemount-lawrence", "eringate-centennial-west deane", "etobicoke west mall", "flemingdon park", "forest hill north", "forest hill south", "glenfield-jane heights", "greenwood-coxwell", "guildwood", "henry farm", "high park north", "high park-swansea", "highland creek", "hillcrest village", "humber heights-westmount", "humber summit", "humbermede", "gumewood-cedarvale", "ionview", "islington-city centre west", "junction area", "keelesdale-eglinton west", "kennedy park", "kensington-chinatown", "kingsview village-the westway", "kingsway south", "l'amoreaux", "lambton baby point", "lansing-westgate", "lawrence park north", "lawrence park south", "leaside-bennington", "little portugal", "long branch", "malvern", "maple leaf", "markland wood", "milliken", "mimico", "morningside", "moss park",
@@ -8,25 +10,27 @@ var neighbourhoods = [
 
 function searchButtonHandler() {
   // query neighbourhoods based on user input
-  var userSearchInput = search.value.toLowerCase();
-  console.log(userSearchInput);
-  var searchResults = neighbourhoods.includes(userSearchInput);
+  userSearchInputEl = search.value.toLowerCase();
+  console.log(userSearchInputEl);
+  var searchResults = neighbourhoods.includes(userSearchInputEl);
   if (searchResults === false || searchResults === null) {
     window.alert("Invalid entry. Please try again!");
   } else {
     console.log(searchResults);
-    generateSearchResults();
+    generateSearchResults(userSearchInputEl);
   }
 }
 
 function generateSearchResults() {
   // make search results appear on page
+  searchResultsWrapperEl.style.display = "block";
+}
+
+function favouriteBtnHandler() {
+  console.log("This neighbourhood has been added to your favourites!")
 }
 
 searchButtonEl.addEventListener("click", searchButtonHandler);
+favouriteBtnEl.addEventListener("click", favouriteBtnHandler);
 
 /////////////////////////// extra /// code //////////////////////////////
-// var neighbourhoods = [
-//     "Agincourt North", "Agincourt South-Malvern West", "Alderwood", "Annex", "Banbury-Don Mills", "Bathurst Manor", "Bay Street Corridor", "Bayview Village", "Bayview Woods-Steeles", "Bedford Park-Nortown", "Beechborough-Greenbrook", "Bendale", "Birchcliffe-Cliffside", "Black Creek", "Blake-Jones", "Briar Hill-Belgravia", "Bridle Path-Sunnybrook-York Mills", "Broadview North", "Brookhaven-Amesbury", "Cabbagetown-South St. James Town", "Caledonia-Fairbank", "Casa Loma", "Centennial Scarborough", "Church-Yonge Corridor", "Clairlea-Birchmount", "Clanton Park", "Cliffcrest", "Corso Italia-Davenport", "Crescent Town", "Danforth-East York", "Danforth", "Don Valley Village", "Dorset Park", "Dovercourt-Wallace Emerson-Junction", "Downsview-Roding-CFB", "Dufferin Grove", "East End-Danforth", "Edenbridge-Humber Valley", "Eglinton East", "Elms-Old Rexdale", "Englemount-Lawrence", "Eringate-Centennial-West Deane", "Etobicoke West Mall", "Flemingdon Park", "Forest Hill North", "Forest Hill South", "Glenfield-Jane Heights", "Greenwood-Coxwell", "Guildwood", "Henry Farm", "“North York", "Henry Farm", "High Park North", "High Park-Swansea", "Highland Creek", "Hillcrest Village", "Humber Heights-Westmount", "Humber Summit", "Humbermede", "Humewood-Cedarvale", "Ionview", "Islington-City Centre West", "Junction Area", "Keelesdale-Eglinton West", "Kennedy Park", "Kensington-Chinatown", "Kingsview Village-The Westway", "Kingsway South", "L'Amoreaux", "Lambton Baby Point", "Lansing-Westgate", "Lawrence Park North", "Lawrence Park South", "Leaside-Bennington", "Little Portugal", "Long Branch", "Malvern", "Maple Leaf", "Markland Wood", "Milliken", "Mimico", "Morningside", "Moss Park",
-//     "Mount Dennis", "Mount Olive-Silverstone-Jamestown", "Mount Pleasant East", "Mount Pleasant West", "New Toronto", "Newtonbrook East", "Newtonbrook West", "Niagara", "North Riverdale", "North St. James Town", "O’Connor-Parkview", "Oakridge", "Oakwood Village", "Old East York", "Palmerston-Little Italy", "Parkwoods-Donalda", "Pelmo Park-Humberlea", "Playter Estates-Danforth", "Pleasant View", "Princess-Rosethorn", "Regent Park", "Rexdale-Kipling", "Rockcliffe-Smythe", "Roncesvalles", "Rosedale-Moore Park", "Rouge", "Runnymede-Bloor West Village", "Rustic", "Scarborough Village", "South Riverdale", "South Parkdale", "St. Andrew-Windfields", "Steeles", "Stonegate-Queensway", "Tam O'Shanter-Sullivan", "The Beaches", "Thistletown-Beaumond Heights", "Thorncliffe Park", "Trinity-Bellwoods", "University of Toronto", "Victoria Village", "Waterfront Communities-The Island", "West Hill", "West Humber-Clairville", "Westminster-Branson", "Weston", "Weston-Pelham Park (Carleton Village)", "Wexford-Maryvale", "Willowdale East", "Willowdale West", "Willowridge-Martingrove-Richview", "Woburn", "Woodbine Corridor", "Woodbine-Lumsden", "Wychwood", "Yonge-Eglinton", "Deer Park", "Yonge-St. Clair", "York University Heights", "Yorkdale-Glen Park"  
-//   ]
