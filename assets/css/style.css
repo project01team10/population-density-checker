@@ -3,6 +3,7 @@
     --primary: #05117a;
     --secondary: #e61a1a;
     --tertiary: #ffffff;
+    --grey: #999999;
 }
 
 * {
@@ -239,6 +240,16 @@ p {
   width: 2%;
   border-top: 5px;
 }
+
+.seach-icon:hover {
+  box-shadow: 0 2px var(--grey);
+  top: -2px;
+}
+.search-icon:active {
+  box-shadow: 0 0px var(--grey);
+  top: 0;
+}
+
 
 .social-media-marketing h2 {
   margin-bottom: 20px;
