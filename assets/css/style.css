@@ -59,13 +59,19 @@ head h2 {
   background: var(--secondary);
 }
 
-main h2 {
+main div h2 {
   color: var(--primary);
   background-color: var(--tertiary);
   padding: 15px;
   font-size: 30px;
   font-weight: normal;
   text-align: center;
+}
+
+main h2 {
+  color: var(--primary);
+  padding: 5px;
+  margin: 5px;
 }
 
 main h3 {
@@ -223,11 +229,6 @@ p {
 .online-reputation-management h2 {
   margin-bottom: 20px;
   font-size: 36px;
-}
-
-.search-header {
-  color: var(--primary);
-  padding: 5px;
 }
 
 .search-field {
