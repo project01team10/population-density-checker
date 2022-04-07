@@ -32,8 +32,6 @@ The navigation tabs change with interaction
 * JS
 
 ## Server-side APIs used: 
-*
-*
 
 ## Screenshots: 
 
