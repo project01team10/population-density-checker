@@ -39,14 +39,15 @@ header div {
   font-family: ‘Gill Sans’, ‘Gill Sans MT’, Calibri, ‘Trebuchet MS’, sans-serif;
   font-size: 20px;
 }
-header div ul {
+header nav ul {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-header div ul li {
+header nav ul li {
   margin-left: 25px;
+  padding-top: 10px;
 }
 
 header img {
@@ -59,9 +60,10 @@ head h2 {
   background: var(--secondary);
 }
 
-main div h2 {
+main div h1 {
   color: var(--primary);
   background-color: var(--tertiary);
+  border-top: solid var(--secondary) 4px;
   padding: 15px;
   font-size: 30px;
   font-weight: normal;
@@ -70,8 +72,8 @@ main div h2 {
 
 main h2 {
   color: var(--primary);
-  padding: 5px;
-  margin: 5px;
+  padding: 10px 5px;
+  margin: none;
 }
 
 main h3 {
@@ -115,6 +117,30 @@ a {
 p {
   font-size: 16px;
 }
+
+.btn {
+  display: inline;
+  font-size: 1.5em;
+  padding: 5px;
+  color: var(--tertiary);
+  background-color: var(--secondary);
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  position: relative;
+  top: -3px;
+  box-shadow: 0 3px var(--grey);
+}
+
+.btn:hover {
+  box-shadow: 0 2px var(--grey);
+  top: -2px;
+}
+.btn:active {
+  box-shadow: 0 0px var(--grey);
+  top: 0;
+}
+
 .hero {
   height: 800px;
   width: 100%;
@@ -231,6 +257,20 @@ p {
   font-size: 36px;
 }
 
+.search-container {
+  background: var(--tertiary);
+  text-align: center;
+}
+
+.search-results-wrapper {
+  color: var(--primary);
+  background-color: var(--tertiary);
+  padding: 5px;
+  margin: 5px;
+  font-size: 1.5em;
+  display: none;
+}
+
 .search-field {
   padding: 5px;
   font-size: 20px;
@@ -240,17 +280,8 @@ p {
 .search-icon {
   width: 2%;
   border-top: 5px;
+  position: relative;
 }
-
-.seach-icon:hover {
-  box-shadow: 0 2px var(--grey);
-  top: -2px;
-}
-.search-icon:active {
-  box-shadow: 0 0px var(--grey);
-  top: 0;
-}
-
 
 .social-media-marketing h2 {
   margin-bottom: 20px;

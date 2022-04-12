@@ -13,46 +13,51 @@
       <img src="./assets/images/population-density-checker-logo-alt-white.svg" />
       <h1>Population Density Checker</h1>
     </a>
-    <div>
-      <nav>
+    <nav>
       <ul>
-          <li>
-              <a class="hover:bg-orange-600" href="./about-our-team.html">Our Team</a>
-          </li>
-          <li>
-            <a class="hover:bg-orange-600" href="./services.html">Services offered</a> 
-            <!-- added these from tailwind as an example  -->
+        <li>
+          <a class="hover:bg-orange-600" href="./about-our-team.html">Our Team</a>
+        </li>
+        <li>
+          <a class="hover:bg-orange-600" href="./services.html">Services offered</a> 
+          <!-- added these from tailwind as an example  -->
         </li>
         <li>
           <a class="hover:bg-orange-600" href="./login.html">Login</a> 
           <!-- added these from tailwind as an example  -->
-      </li>
-          <li>
-              <a class="hover:bg-green-600" href="./map.html">MAP</a>
-          </li>
-          <li>
-              <a class="hover:bg-orange-600" href="./recommended.html">Recommended</a> 
-              <!-- added these from tailwind as an example  -->
-          </li>
+        </li>
+        <li>
+          <a class="hover:bg-green-600" href="./map.html">MAP</a>
+        </li>
+        <li>
+          <a class="hover:bg-orange-600" href="./recommended.html">Recommended</a> 
+        <!-- added these from tailwind as an example  -->
+        </li>
       </ul>
-      </nav>
-  </div>
+    </nav>
   </header>
   <main>
-    <head class="search-container" id="searchContainer">
+    <div>
+      <h1>Recommended</h1>
+    </div>
+    <section class="search-container" id="searchContainer">
       <h2 class="search-header">Search Toronto Neighbourhoods!</h2>
       <input type="search" role="search" class=search-field id="search" />
       <img class="search-icon" id="searchIcon" role="button" alt="search icon" src="./assets/images/search-svgrepo-com.svg" />
-      <div>
-        <h2>Recommended</h2>
-      </div>
       <section>
         <h3>Recently Searched Neighbourhoods</h3>
+        <div class="search-results-wrapper" id="searchResultsWrapper">
+          <h4>Search results:</h4>
+          <ul class="search-results-list" id="searchResultsList">
+            <li></li>
+            <button alt="favourite neighbourhood button" class="btn" id="favouriteBtn" role="submit">Favourite</button>
+          </ul>
+        </div>
       </section>
       <section>
         <h3>Favourites</h3>
       </section>
-    </head>
+    </section>
   </main>
 
   <footer>
@@ -61,5 +66,6 @@
     <h3>Last updated March 2022.</h3>
   </footer>
   <script src="./assets/js/mapbox.js"></script>
+  <script src="./assets/js/recommended.js"></script>
 </body>
 </html>

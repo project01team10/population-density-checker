@@ -3,7 +3,7 @@
 
 # Population Density Checker
 
-## Live Demo: 
+## Live Demo: https://project01team10.github.io/population-density-checker
 
 ## Purpose:
 
