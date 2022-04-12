@@ -147,6 +147,8 @@ const options = {
 document.querySelector("#enter").addEventListener("click", e => {
     e.preventDefault();
     var inputValue = searchApi.value; 
+    localStorage.setItem('search', inputValue)
+
     fetch('https://wft-geo-db.p.rapidapi.com/v1/geo/cities/' +inputValue, options)
 	.then(response => response.json())
     .then(response =>  {
@@ -167,3 +169,16 @@ document.querySelector("#enter").addEventListener("click", e => {
 	.catch(err => console.error(err));
 
 });
+
+function set(){
+    var sendJSON = JSON.stringify(inputValue);
+    localStorage.setItem('inputValue',sendJSON)
+};
+
+function get(){
+    var getJSON = localStorage.getItem('inputValue');
+    if (getJSON){
+        allMovie = JSON.parse(getJSON)
+    }
+
+};
