@@ -11,6 +11,7 @@ var neighbourhoods = [
 function searchButtonHandler() {
   // query neighbourhoods based on user input
   userSearchInputEl = search.value.toLowerCase();
+  localStorage.setItem('city search', userSearchInputEl);
   console.log(userSearchInputEl);
   var searchResults = neighbourhoods.includes(userSearchInputEl);
   if (searchResults === false || searchResults === null) {
@@ -27,6 +28,7 @@ function generateSearchResults() {
 }
 
 function favouriteBtnHandler() {
+  localStorage.setItem('city search favorite', userSearchInputEl);
   console.log("This neighbourhood has been added to your favourites!")
 }
 
