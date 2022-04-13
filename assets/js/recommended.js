@@ -12,6 +12,7 @@ function searchButtonHandler() {
   // query neighbourhoods based on user input
   userSearchInputEl = search.value.toLowerCase();
   localStorage.setItem('city search', userSearchInputEl);
+  // need to add a way to save multiple searches, most likey with a for loop 
   console.log(userSearchInputEl);
   var searchResults = neighbourhoods.includes(userSearchInputEl);
   if (searchResults === false || searchResults === null) {
