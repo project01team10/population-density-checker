@@ -1,15 +1,13 @@
 <h1 align ="center">Population Density Checker</h1>
-<p align ="center">Project #1</p>
-
-# Population Density Checker
 
 ## Live Demo: https://project01team10.github.io/population-density-checker
 
 ## Purpose:
+Population Density Checker is a web application where the end user is able to use the checker as a guide to understanding population density. The user can use it in different locations for various uses such as looking up target audiences or relocation. Users can create accounts and log in. This application was built using API requests, as well as JavaScript and Tailwind for the front end.
 
 ## USER STORY:
-As a user 
-I want to search for a specific location and see the population density in that area
+As a user<br>
+I want to search for a specific location and see the population density in that area<br>
 I want to be able to search for questions about the area
 
 
